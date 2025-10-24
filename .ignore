@@ -1,0 +1,15 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+
+# Tooling and editor folders
+.vscode/
+.idea/
+
+# Local data or logs
+*.log
