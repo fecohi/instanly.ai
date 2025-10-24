@@ -100,7 +100,7 @@ For more details, visit our [official documentation](https://developer.instantly
 
 Have questions or need support? Join our developer community:
 
-- [Instantly Developer Forum](https://forum.instantly.ai)
-- [Contact Support](https://support.instantly.ai)
+- [Instantly Developer Discord](https://discord.instantly.ai)
+- [Contact Support](mailto:support@instantly.ai)
 
 Let’s build something amazing together!
