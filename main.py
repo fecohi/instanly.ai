@@ -37,7 +37,7 @@ def main():
     leads_file = "leads.csv"
 
     # Indicate whether mock mode is enabled
-    if os.getenv("MOCK"):
+    if os.getenv("MOCK", "").lower() in ("1", "true"):
         print("🛠️ Running in MOCK mode: No real data will be used.")
     else:
         print("🚀 Running in PRODUCTION mode: Real data will be used.")
