@@ -22,9 +22,10 @@ def verify_email(email):
         return data.get("verification_status", "unknown")  # Extract 'verification_status'
     return "unknown"
 
-def create_lead(list_id, name, email):
+def create_lead(list_id, name, lastname, email):
     payload = {
         "first_name": name,
+        "last_name": lastname,
         "email": email,
         "list_id": list_id,
     }
@@ -52,9 +53,8 @@ def main():
         for row in reader:
             status = verify_email(row["email"])
             print(f"🔍 {row['email']} -> {status}")
-            mock_mode = bool(os.getenv("MOCK"))
-            if status == "valid":
-                if create_lead(lead_list_id, row["name"], row["email"]):
+            if status != "invalid":
+                if create_lead(lead_list_id, row["name"], row["lastname"], row["email"]):
                     count += 1
             else:
                 skipped += 1
